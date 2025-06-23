@@ -2,12 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: mytheme --default;
+}
 
 @plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  --color-primary: #2980EF;
+  name: "mytheme";
+  default: true; 
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #FFF6F6; /* Color de fondo*/
+  --color-base-200: #FF5959; /* Color de hover*/
+  --color-base-300: #2980EF; 
+  --color-base-content: #FFFCFC; /* Color del texto */
+  --color-secondary: #FC8086; /* Color de los footer*/
+
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 25px;
+
+  --depth: 1;
+  --noise: 0;
 }
 
 @theme {
