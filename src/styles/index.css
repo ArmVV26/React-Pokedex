@@ -14,8 +14,9 @@
 
   --color-base-100: #FFF6F6; /* Color de fondo*/
   --color-base-200: #FF5959; /* Color de hover*/
-  --color-base-300: #2980EF; 
-  --color-base-content: #FFFCFC; /* Color del texto */
+  --color-base-300: #2A2A2A; /* Color de fondo de la tarjeta*/
+  --color-base-content: #FFFCFC; /* Color del texto*/
+  --color-primary: #FF5959;
   --color-secondary: #FC8086; /* Color de los footer*/
 
   --radius-selector: 1rem;
@@ -33,24 +34,24 @@
 
 @theme {
   /* Colores de los tipos de pokemons */
-  --bg-pokemon-acero: #60A1B8;
-  --bg-pokemon-agua: #2980EF;
-  --bg-pokemon-bicho: #91A119;
-  --bg-pokemon-dragon: #5061E1;
-  --bg-pokemon-electrico: #FAC000;
-  --bg-pokemon-fantasma: #704170;
-  --bg-pokemon-fuego: #E62829;
-  --bg-pokemon-hada: #EF71EF;
-  --bg-pokemon-hielo: #3FD8FF;
-  --bg-pokemon-lucha: #FF8000;
-  --bg-pokemon-normal: #9FA19F;
-  --bg-pokemon-planta: #3FA129;
-  --bg-pokemon-psiquico: #EF4179;
-  --bg-pokemon-roca: #AFA981;
-  --bg-pokemon-siniestro: #50413F;
-  --bg-pokemon-tierra: #915121;
-  --bg-pokemon-veneno: #8F41CB;
-  --bg-pokemon-volador: #81B9EF;
+  --color-pokemon-acero: #60A1B8;
+  --color-pokemon-agua: #2980EF;
+  --color-pokemon-bicho: #91A119;
+  --color-pokemon-dragon: #5061E1;
+  --color-pokemon-electrico: #FAC000;
+  --color-pokemon-fantasma: #704170;
+  --color-pokemon-fuego: #E62829;
+  --color-pokemon-hada: #EF71EF;
+  --color-pokemon-hielo: #3FD8FF;
+  --color-pokemon-lucha: #FF8000;
+  --color-pokemon-normal: #9FA19F;
+  --color-pokemon-planta: #3FA129;
+  --color-pokemon-psiquico: #EF4179;
+  --color-pokemon-roca: #AFA981;
+  --color-pokemon-siniestro: #50413F;
+  --color-pokemon-tierra: #915121;
+  --color-pokemon-veneno: #8F41CB;
+  --color-pokemon-volador: #81B9EF;
   --custom-white-red: #FAEFEF;
   --custom-yellow: #FFCF5F;
   --custom-black: #312C2C;
@@ -58,4 +59,33 @@
   /* Fuente de las letras */
   --font-lato: "Lato", sans-serif;
   --font-roboto: "Roboto", sans-serif;
+}
+
+/* From Uiverse.io by csemszepp */ 
+.container {
+  width: 100%;
+  height: 100%;
+  --s: 82px;
+  --c1: #b2b2b2;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+
+  --_g: var(--c3) 0 120deg, #0000 0;
+  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      var(--c3) 60deg,
+      var(--c2) 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+    linear-gradient(
+      90deg,
+      var(--c1) calc(100% / 6),
+      var(--c2) 0 50%,
+      var(--c1) 0 calc(500% / 6),
+      var(--c2) 0
+    );
+  background-size: calc(1.732 * var(--s)) var(--s);
 }

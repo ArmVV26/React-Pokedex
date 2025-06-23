@@ -11,7 +11,7 @@ export async function getPokemons(limit = 20, offset = 0) {
         dataDetalle.types.map(async (tipo) => {
           const resTipo = await fetch(tipo.type.url)
           const dataTipo = await resTipo.json()
-          return dataTipo.names[5].name // Español
+          return dataTipo.names[5].name 
         })
       )
 
