@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #2980EF;
+}
+
+@theme {
+  /* Colores de los tipos de pokemons */
+  --bg-pokemon-acero: #60A1B8;
+  --bg-pokemon-agua: #2980EF;
+  --bg-pokemon-bicho: #91A119;
+  --bg-pokemon-dragon: #5061E1;
+  --bg-pokemon-electrico: #FAC000;
+  --bg-pokemon-fantasma: #704170;
+  --bg-pokemon-fuego: #E62829;
+  --bg-pokemon-hada: #EF71EF;
+  --bg-pokemon-hielo: #3FD8FF;
+  --bg-pokemon-lucha: #FF8000;
+  --bg-pokemon-normal: #9FA19F;
+  --bg-pokemon-planta: #3FA129;
+  --bg-pokemon-psiquico: #EF4179;
+  --bg-pokemon-roca: #AFA981;
+  --bg-pokemon-siniestro: #50413F;
+  --bg-pokemon-tierra: #915121;
+  --bg-pokemon-veneno: #8F41CB;
+  --bg-pokemon-volador: #81B9EF;
+  --custom-white-red: #FAEFEF;
+  --custom-yellow: #FFCF5F;
+  --custom-black: #312C2C;
+
+  /* Fuente de las letras */
+  --font-lato: "Lato", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
