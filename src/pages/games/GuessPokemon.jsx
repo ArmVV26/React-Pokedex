@@ -1,53 +1,21 @@
-// src/pages/GuessPokemon.jsx
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { pokeApi } from "@/utils/pokeApi";
+import { Link } from "react-router-dom";
+import { useGuessPokemon } from "@/hooks/useGuessPokemon";
+import { getPokemonImage } from "@/utils/pokemonHelpers";
 
 const GuessPokemon = () => {
-  const [pokemon, setPokemon] = useState(null);
-  const [guess, setGuess] = useState("");
-  const [result, setResult] = useState(null);
-  const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(
-    () => localStorage.getItem("guessBestScore") || 0,
-  );
-  const navigate = useNavigate();
+  const {
+    pokemon,
+    guess,
+    setGuess,
+    result,
+    handleSubmit,
+    getRandomPokemon,
+    score,
+    bestScore,
+    loading,
+  } = useGuessPokemon();
 
-  const getRandomPokemon = async () => {
-    try {
-      const id = Math.floor(Math.random() * 898) + 1; // Gen 1-8
-      const { data } = await pokeApi.get(`pokemon/${id}`);
-      setPokemon(data);
-      setGuess("");
-      setResult(null);
-    } catch (error) {
-      console.error("Error al cargar el Pokémon:", error);
-    }
-  };
-
-  useEffect(() => {
-    getRandomPokemon();
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const correct = pokemon.name.toLowerCase() === guess.toLowerCase();
-
-    if (correct) {
-      const newScore = score + 1;
-      setScore(newScore);
-      setResult("correct");
-      if (newScore > bestScore) {
-        setBestScore(newScore);
-        localStorage.setItem("guessBestScore", newScore);
-      }
-    } else {
-      setResult("wrong");
-      setScore(0);
-    }
-  };
-
-  if (!pokemon) return <p>Cargando...</p>;
+  if (!pokemon) return <p className="text-center">Cargando...</p>;
 
   return (
     <section className="bg-base-300 mx-auto my-18 max-w-xl rounded-2xl px-4 py-8 text-center shadow-2xl">
@@ -55,7 +23,7 @@ const GuessPokemon = () => {
 
       <div className="relative container mx-auto mb-5 h-full w-full rounded-2xl">
         <img
-          src={pokemon.sprites.other["official-artwork"].front_default}
+          src={getPokemonImage(pokemon, "official-artwork")}
           alt="pokemon"
           className={`pointer-events-none mx-auto h-64 w-64 object-contain transition duration-500 ${
             result === "correct" ? "brightness-100" : "brightness-0"
@@ -63,7 +31,7 @@ const GuessPokemon = () => {
         />
       </div>
 
-      <div className="mb-5 h-5">
+      <article className="mb-5 h-5">
         {result === "correct" && (
           <p className="font-semibold text-green-500">
             ¡Correcto! Es <span className="capitalize">{pokemon.name}</span>.
@@ -75,9 +43,9 @@ const GuessPokemon = () => {
             ¡Fallaste! Era <span className="capitalize">{pokemon.name}</span>.
           </p>
         )}
-      </div>
+      </article>
 
-      <div className="flex items-center justify-center gap-2">
+      <article className="flex items-center justify-center gap-2">
         <form
           onSubmit={handleSubmit}
           className="flex w-120 flex-col items-center gap-4"
@@ -119,9 +87,9 @@ const GuessPokemon = () => {
             )}
           </div>
         </form>
-      </div>
+      </article>
 
-      <div className="mt-5 flex justify-center gap-10">
+      <article className="mt-5 flex justify-center gap-10">
         <div>
           <p className="text-3xl font-bold">{score}</p>
           <p className="text-base-200 font-bold">Puntuación actual</p>
@@ -130,16 +98,15 @@ const GuessPokemon = () => {
           <p className="text-3xl font-bold">{bestScore}</p>
           <p className="text-base-200 font-bold">Mejor puntuación</p>
         </div>
-      </div>
+      </article>
 
-      <div className="mt-8">
-        <button
-          className="btn btn-neutral rounded-full"
-          onClick={() => navigate("/games")}
-        >
-          Volver al menú de juegos
-        </button>
-      </div>
+      <footer className="mt-8">
+        <Link to="/games">
+          <button className="btn btn-neutral rounded-full">
+            Volver al menú de juegos
+          </button>
+        </Link>
+      </footer>
     </section>
   );
 };

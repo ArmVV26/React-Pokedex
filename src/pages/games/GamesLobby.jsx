@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 function GamesLobby() {
   return (
-    <main className="py-5 text-center">
-      <section className="mx-auto max-w-7xl py-5 md:px-5">
+    <div className="py-5 text-center">
+      <div className="mx-auto max-w-7xl py-5 md:px-5">
         <h1 className="text-base-200 mb-10 text-center text-3xl font-bold">
           ¡Selecciona un juego!
         </h1>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Game 1 */}
           <article className="bg-base-300 p-5 shadow-md transition-all hover:shadow-xl md:rounded-2xl">
             <h2 className="mb-2 text-xl font-semibold">
@@ -17,8 +17,8 @@ function GamesLobby() {
             <p className="text-base-content/80 mb-4 text-sm">
               Adivina la silueta del Pokémon. ¡Pon a prueba tu memoria visual!
             </p>
-            <Link to="/games/find-pokemon" className="btn btn-primary w-full">
-              Jugar
+            <Link to="/games/find-pokemon">
+              <button className="btn btn-primary w-full">Jugar</button>
             </Link>
           </article>
 
@@ -29,8 +29,8 @@ function GamesLobby() {
               Elige el tipo más efectivo contra el mostrado. ¡Puntúa hasta
               fallar!
             </p>
-            <Link to="/games/type-pokemon" className="btn btn-secondary w-full">
-              Jugar
+            <Link to="/games/type-pokemon">
+              <button className="btn btn-secondary w-full">Jugar</button>
             </Link>
           </article>
 
@@ -43,8 +43,8 @@ function GamesLobby() {
               Selecciona uno o dos tipos para ver sus debilidades y
               resistencias.
             </p>
-            <Link to="/games/calculator" className="btn btn-primary w-full">
-              Usar
+            <Link to="/games/calculator">
+              <button className="btn btn-primary w-full">Usar</button>
             </Link>
           </article>
 
@@ -55,8 +55,8 @@ function GamesLobby() {
               Escucha el sonido del Pokémon y adivina cuál es. ¡A prueba tu
               oído!
             </p>
-            <Link to="/games/sound-pokemon" className="btn btn-primary w-full">
-              Jugar
+            <Link to="/games/sound-pokemon">
+              <button className="btn btn-primary w-full">Jugar</button>
             </Link>
           </article>
 
@@ -66,13 +66,13 @@ function GamesLobby() {
             <p className="text-base-content/80 mb-4 text-sm">
               Proximamente se añadiran mas juegos. ¡No te los pierdas!
             </p>
-            <Link to="/games/sound-pokemon" className="btn btn-disabled w-full">
-              Jugar
+            <Link to="/games/sound-pokemon">
+              <button className="btn btn-disabled w-full">Jugar</button>
             </Link>
           </article>
-        </div>
-      </section>
-    </main>
+        </section>
+      </div>
+    </div>
   );
 }
 export default GamesLobby;

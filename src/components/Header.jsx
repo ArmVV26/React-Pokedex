@@ -17,27 +17,24 @@ export default function Header() {
       <nav>
         <ul className="font-lato flex font-bold">
           <li>
-            <Link
-              to="/pokemons"
-              className="btn btn-ghost btn-sm hover:bg-base-200 p-0 text-sm sm:text-lg"
-            >
-              Pokemons
+            <Link to="/pokemons">
+              <button className="btn btn-ghost btn-sm hover:bg-base-200 p-0 text-sm sm:text-lg">
+                Pokemons
+              </button>
             </Link>
           </li>
           <li>
-            <Link
-              to="/games"
-              className="btn btn-ghost btn-sm hover:bg-base-200 p-0 text-sm sm:text-lg"
-            >
-              Juegos
+            <Link to="/games">
+              <button className="btn btn-ghost btn-sm hover:bg-base-200 p-0 text-sm sm:text-lg">
+                Juegos
+              </button>
             </Link>
           </li>
           <li>
-            <Link
-              to="/about-us"
-              className="btn btn-ghost btn-sm hover:bg-base-200 p-0 text-sm sm:text-lg"
-            >
-              Acerca de
+            <Link to="/about-us">
+              <button className="btn btn-ghost btn-sm hover:bg-base-200 p-0 text-sm sm:text-lg">
+                Acerca de
+              </button>
             </Link>
           </li>
         </ul>
