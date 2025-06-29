@@ -1,29 +1,31 @@
+import { pokeApi } from "@/utils/pokeApi";
+
 export async function getPokemons(limit = 20, offset = 0) {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
-  const data = await res.json()
+  const { data } = await pokeApi.get(`pokemon?limit=${limit}&offset=${offset}`);
 
   const detalles = await Promise.all(
     data.results.map(async ({ url }) => {
-      const resDetalle = await fetch(url)
-      const dataDetalle = await resDetalle.json()
+      const { data: detalle } = await pokeApi.get(url);
 
       const tipos = await Promise.all(
-        dataDetalle.types.map(async (tipo) => {
-          const resTipo = await fetch(tipo.type.url)
-          const dataTipo = await resTipo.json()
-          return dataTipo.names[5].name 
-        })
-      )
+        detalle.types.map(async (tipo) => {
+          const { data: tipoData } = await pokeApi.get(tipo.type.url);
+          return (
+            tipoData.names.find((n) => n.language.name === "es")?.name ||
+            tipo.type.name
+          );
+        }),
+      );
 
       return {
-        id: dataDetalle.id,
-        nombre: dataDetalle.name.charAt(0).toUpperCase() + dataDetalle.name.slice(1),
+        id: detalle.id,
+        nombre: detalle.name.charAt(0).toUpperCase() + detalle.name.slice(1),
         tipos,
-        imagen: dataDetalle.sprites.front_default,
-        peso: dataDetalle.weight
-      }
-    })
-  )
+        imagen: detalle.sprites.front_default,
+        peso: detalle.weight,
+      };
+    }),
+  );
 
-  return detalles
+  return detalles;
 }
