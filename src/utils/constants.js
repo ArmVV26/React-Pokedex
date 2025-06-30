@@ -3,7 +3,7 @@ export const colorTypes = {
   acero: "bg-pokemon-acero",
   agua: "bg-pokemon-agua",
   bicho: "bg-pokemon-bicho",
-  dragon: "bg-pokemon-dragon",
+  dragón: "bg-pokemon-dragon",
   eléctrico: "bg-pokemon-electrico",
   fantasma: "bg-pokemon-fantasma",
   fuego: "bg-pokemon-fuego",

@@ -9,7 +9,8 @@ export default function Header() {
           <img
             src="/img/logo-Pokeball-256px.png"
             alt="Logo de Pokemon"
-            className="h-20 w-20"
+            // className="h-20 w-20 transition hover:animate-pulse hover:drop-shadow-xl"
+            className="h-20 w-20 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-12 hover:drop-shadow-xl"
           />
         </picture>
       </Link>

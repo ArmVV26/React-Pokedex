@@ -60,6 +60,5 @@ export function useGuessPokemon() {
     getRandomPokemon,
     score,
     bestScore,
-    loading,
   };
 }

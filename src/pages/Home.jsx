@@ -149,18 +149,16 @@ function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/games/calculator">
+                  <Link to="/games/type-calculator">
                     <button className="btn btn-neutral w-full">
                       🧮 Calculadora de Tipos
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/games/sound-pokemon">
-                    <button className="btn btn-neutral w-full">
-                      🔊 ¿Por su grito?
-                    </button>
-                  </Link>
+                  <button className="btn btn-accent pointer-events-none w-full">
+                    Proximamente ...
+                  </button>
                 </li>
                 <li>
                   <Link to="/games">
@@ -187,12 +185,10 @@ function Home() {
             <button className="btn btn-primary">📚 Ver Pokémons</button>
           </Link>
           <Link to="/games">
-            <button className="btn btn-accent">🎮 Ir a Juegos</button>
+            <button className="btn btn-secondary">🎮 Ir a Juegos</button>
           </Link>
           <Link to="/acerca">
-            <button className="btn btn-secondary">
-              🧾 Acerca del Proyecto
-            </button>
+            <button className="btn btn-primary">🧾 Acerca del Proyecto</button>
           </Link>
         </div>
       </section>

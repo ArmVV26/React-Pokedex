@@ -22,6 +22,8 @@
   --color-error: #e00000; /* Color input error*/
   --color-neutral: #fff6f6;
   --color-neutral-content: #2a2a2a;
+  --color-accent: #656161;
+  --color-accent-content: #fff6f6;
 
   --radius-selector: 1rem;
   --radius-field: 0.25rem;
