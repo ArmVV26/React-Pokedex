@@ -19,8 +19,9 @@ const EffectiveTypesGame = () => {
   if (!currentType) return <p>Cargando...</p>;
 
   return (
-    <section className="bg-base-300 my-20 max-w-160 px-2 py-5 text-center shadow-lg sm:mx-auto sm:rounded-2xl sm:px-8">
-      <h1 className="mb-2 text-3xl font-bold">⚔️ Tipos Efectivos</h1>
+    <section className="bg-base-300 font-roboto my-20 max-w-160 px-2 py-5 text-center shadow-lg sm:mx-auto sm:rounded-2xl sm:px-8">
+      <title>Juego - Tipos Efectivos</title>
+      <h1 className="font-lato mb-2 text-3xl font-bold">⚔️ Tipos Efectivos</h1>
       <p className="mb-10 flex flex-col items-center justify-center gap-2 sm:mb-0 sm:flex-row">
         Elige el tipo más efectivo contra:{" "}
         <strong
@@ -54,13 +55,13 @@ const EffectiveTypesGame = () => {
       <article className="mt-4 flex justify-center gap-10">
         <div>
           <p className="text-3xl font-bold">{score}</p>
-          <p className="text-base-200 text-xs font-bold sm:text-base">
+          <p className="text-base-200 font-lato text-xs font-bold sm:text-base">
             Puntuación actual
           </p>
         </div>
         <div>
           <p className="text-3xl font-bold">{bestScore}</p>
-          <p className="text-base-200 text-xs font-bold sm:text-base">
+          <p className="text-base-200 font-lato text-xs font-bold sm:text-base">
             Mejor puntuación
           </p>
         </div>

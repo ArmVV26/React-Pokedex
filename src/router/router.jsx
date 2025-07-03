@@ -7,6 +7,10 @@ import GamesLobby from "@/pages/games/GamesLobby";
 import GuessPokemon from "@/pages/games/GuessPokemon";
 import EffectiveTypesGame from "@/pages/games/EffectiveTypes";
 import TypeCalculator from "@/pages/games/TypeCalculator";
+import AboutUs from "@/pages/static/AboutUs";
+import Terms from "@/pages/static/Terms";
+import Privacity from "@/pages/static/Privacity";
+import NotFound from "@/pages/static/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +24,10 @@ export const router = createBrowserRouter([
       { path: "games/find-pokemon", element: <GuessPokemon /> },
       { path: "games/type-pokemon", element: <EffectiveTypesGame /> },
       { path: "games/type-calculator", element: <TypeCalculator /> },
+      { path: "about-us", element: <AboutUs /> },
+      { path: "terms", element: <Terms /> },
+      { path: "privacity", element: <Privacity /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);

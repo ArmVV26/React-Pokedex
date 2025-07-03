@@ -59,8 +59,11 @@ const TypeCalculator = () => {
 
   return (
     <section className="bg-base-300 mx-auto my-10 flex w-full flex-col p-6 text-center shadow-lg sm:h-[800px] lg:h-[720px] lg:max-w-5xl lg:rounded-2xl">
+      <title>Juego - Calculadora Tipos</title>
       <header>
-        <h2 className="mb-4 text-2xl font-bold">🧮 Calculadora de Tipos</h2>
+        <h1 className="font-lato mb-4 text-2xl font-bold">
+          🧮 Calculadora de Tipos
+        </h1>
         <p className="mb-4 text-sm">
           Selecciona uno o dos tipos para calcular sus debilidades.
         </p>

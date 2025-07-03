@@ -2,15 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="flex flex-col items-center justify-between bg-red-500 pt-2 pr-5 pb-2 pl-5 sm:flex-row">
+    <header className="font-lato flex flex-col items-center justify-between bg-red-500 pt-2 pr-5 pb-2 pl-5 sm:flex-row">
       <Link to="/" className="">
         <picture>
           <source srcSet="/img/logo-Pokeball-256px.png" type="image/png" />
           <img
             src="/img/logo-Pokeball-256px.png"
             alt="Logo de Pokemon"
-            // className="h-20 w-20 transition hover:animate-pulse hover:drop-shadow-xl"
-            className="h-20 w-20 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-12 hover:drop-shadow-xl"
+            className="h-20 w-20 cursor-pointer drop-shadow-xl transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-12"
           />
         </picture>
       </Link>

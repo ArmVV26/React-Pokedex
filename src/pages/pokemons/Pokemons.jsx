@@ -8,6 +8,7 @@ function Pokemons() {
 
   return (
     <div className="flex flex-col gap-5 p-5">
+      <title>Lista Pokemon</title>
       <section className="grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {pokemons.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
@@ -16,7 +17,9 @@ function Pokemons() {
 
       {loading && (
         <section className="mx-auto flex flex-col items-center justify-center">
-          <h1 className="text-base-200 text-2xl font-bold">Cargando Pokémon</h1>
+          <h1 className="font-lato text-base-200 text-2xl font-bold">
+            Cargando Pokémon
+          </h1>
           <div className="loading loading-spinner text-primary m-auto h-100 w-100"></div>
         </section>
       )}

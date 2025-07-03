@@ -15,12 +15,13 @@ function Home() {
 
   return (
     <div className="py-5 text-center">
+      <title>Home</title>
       {/* Search Card */}
-      <section className="bg-base-300 mx-auto flex flex-col items-center justify-center p-5 md:max-w-190 md:rounded-2xl">
-        <h1 className="text-base-200 text-3xl font-bold">
+      <section className="bg-base-300 mx-auto flex flex-col items-center justify-center py-3 md:max-w-190 md:rounded-2xl">
+        <h1 className="text-base-200 font-lato text-3xl font-bold">
           ¡Bienvenido al mundo Pokémon!
         </h1>
-        <p className="text-base-100 mb-6 text-sm">
+        <p className="text-base-100 mb-4 text-sm">
           Busca por nombre para conocer más detalles sobre el pokemon que deseas
           buscar
         </p>
@@ -70,8 +71,8 @@ function Home() {
       <section className="mx-auto my-2 grid max-w-190 gap-2 sm:grid-cols-2">
         {/* Pokemon Alet Card */}
         {randomPokemon && (
-          <article className="bg-base-300 flex flex-col items-center p-5 sm:rounded-r-2xl md:rounded-2xl">
-            <h1 className="text-base-200 mb-3 text-xl font-bold">
+          <article className="bg-base-300 flex flex-col items-center py-3 sm:rounded-r-2xl md:rounded-2xl">
+            <h1 className="font-lato text-base-200 mb-3 text-xl font-bold">
               Pokémon Aleatorio
             </h1>
             <img
@@ -128,8 +129,8 @@ function Home() {
 
         {/* Games Card */}
         {randomPokemon && (
-          <article className="bg-base-200 flex flex-col p-5 sm:rounded-l-2xl md:rounded-2xl">
-            <h2 className="text-base-100 mb-5 text-xl font-bold">
+          <article className="bg-base-200 flex flex-col px-5 py-3 sm:rounded-l-2xl md:rounded-2xl">
+            <h2 className="font-lato text-base-100 mb-5 text-xl font-bold">
               Juegos disponibles
             </h2>
             <nav>
@@ -172,8 +173,8 @@ function Home() {
       </section>
 
       {/* Links Card */}
-      <section className="bg-base-300 mx-auto mt-2 max-w-190 p-6 text-center md:rounded-2xl">
-        <h1 className="text-base-200 text-2xl font-bold">
+      <section className="bg-base-300 mx-auto mt-2 max-w-190 py-4 text-center md:rounded-2xl">
+        <h1 className="font-lato text-base-200 text-2xl font-bold">
           ¡Explora el mundo Pokémon!
         </h1>
         <p className="text-base-100 mb-6">

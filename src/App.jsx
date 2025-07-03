@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="background">
+      <main className="background font-roboto">
         <Outlet />
       </main>
       <Footer />

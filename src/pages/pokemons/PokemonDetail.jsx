@@ -66,7 +66,9 @@ function PokemonDetail() {
   if (!pokemon) {
     return (
       <article className="mx-auto flex flex-col items-center justify-center">
-        <h1 className="text-base-200 text-2xl font-bold">Cargando Pokémon</h1>
+        <h1 className="font-lato text-base-200 text-2xl font-bold">
+          Cargando Pokémon
+        </h1>
         <div className="loading loading-spinner text-primary m-auto h-100 w-100"></div>
       </article>
     );
@@ -74,6 +76,7 @@ function PokemonDetail() {
 
   return (
     <div className="font-roboto grid gap-5 pt-5 pb-5 sm:mx-20 sm:grid-cols-1 md:mx-50 2xl:mx-90 2xl:grid-cols-2">
+      <title>Detalles Pokemon</title>
       {/* Firts Card */}
       <section className="card shadow-xl">
         <header className="container flex flex-col justify-center rounded-t-xl">
@@ -106,7 +109,9 @@ function PokemonDetail() {
 
         <article className="bg-base-300 card-body rounded-b-xl px-4 py-2">
           <div className="card-title font-lato flex items-center justify-between">
-            <h1 className="text-xl font-bold capitalize">{pokemon.name}</h1>
+            <h1 className="font-lato text-xl font-bold capitalize">
+              {pokemon.name}
+            </h1>
             <h2 className="text-xl font-bold text-yellow-500 italic">
               ID: {pokemon.id}
             </h2>
@@ -157,7 +162,9 @@ function PokemonDetail() {
       {/* Second Card */}
       <section className="card bg-base-300 shadow-xl">
         <article className="card-body text-center">
-          <h3 className="text-lg font-bold">Movimientos por método</h3>
+          <h3 className="font-lato text-lg font-bold">
+            Movimientos por método
+          </h3>
           <ResponsiveContainer width="100%" height={400}>
             <RadarChart data={chartData}>
               <PolarGrid stroke="#FFFCFC" />
@@ -178,7 +185,7 @@ function PokemonDetail() {
           </ResponsiveContainer>
 
           <footer className="flex flex-col items-center justify-center">
-            <p className="mt-5 mb-2 text-lg">Debilidades</p>
+            <p className="font-lato mt-5 mb-2 text-lg">Debilidades</p>
             <div className="flex flex-wrap gap-2">
               {spanishWeaknesses.map((w, i) => (
                 <p
@@ -199,7 +206,9 @@ function PokemonDetail() {
       {pokemon.game_indices.length !== 0 && (
         <section className="card bg-base-300 shadow-md lg:col-span-1 2xl:col-span-2">
           <article className="card-body">
-            <h3 className="mb-2 text-lg font-bold">Apariciones en juegos</h3>
+            <h1 className="font-lato mb-2 text-lg font-bold">
+              Apariciones en juegos
+            </h1>
             <div className="flex flex-wrap gap-2">
               {pokemon.game_indices.map((g, i) => {
                 const info = gamesInfo[g.version.name] || {

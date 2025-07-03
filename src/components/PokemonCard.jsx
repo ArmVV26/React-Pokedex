@@ -13,14 +13,14 @@ function PokemonCard({ pokemon }) {
           />
         </figure>
 
-        <article className="bg-base-300 card-body font-lato rounded-b-lg p-0 px-5">
+        <article className="bg-base-300 card-body rounded-b-lg p-0 px-5">
           <header className="card-title flex items-center justify-between">
-            <h1 className="text-xl font-bold">{pokemon.nombre}</h1>
+            <h1 className="font-lato text-xl font-bold">{pokemon.nombre}</h1>
             <h2 className="text-xl font-bold text-yellow-500 italic">
               Nº. {pokemon.id}
             </h2>
           </header>
-          <main className="font-roboto flex justify-center gap-2 text-center">
+          <main className="flex justify-center gap-2 text-center">
             {pokemon.tipos.map((tipo) => (
               <p
                 key={tipo}

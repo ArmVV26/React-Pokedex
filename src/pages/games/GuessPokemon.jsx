@@ -18,7 +18,10 @@ const GuessPokemon = () => {
 
   return (
     <section className="bg-base-300 my-18 max-w-160 px-2 py-8 text-center shadow-2xl sm:mx-auto sm:rounded-2xl sm:px-20">
-      <h1 className="mb-6 text-3xl font-bold">🔍 ¿Quién es ese Pokémon?</h1>
+      <title>Juego - Adivina el Pokemon</title>
+      <h1 className="font-lato mb-6 text-3xl font-bold">
+        🔍 ¿Quién es ese Pokémon?
+      </h1>
 
       <div className="relative container mx-auto mb-5 h-full w-full rounded-2xl">
         <img
@@ -91,13 +94,13 @@ const GuessPokemon = () => {
       <article className="mt-5 flex justify-center gap-10">
         <div>
           <p className="text-3xl font-bold">{score}</p>
-          <p className="text-base-200 text-xs font-bold sm:text-base">
+          <p className="font-lato text-base-200 text-xs font-bold sm:text-base">
             Puntuación actual
           </p>
         </div>
         <div>
           <p className="text-3xl font-bold">{bestScore}</p>
-          <p className="text-base-200 text-xs font-bold sm:text-base">
+          <p className="font-lato text-base-200 text-xs font-bold sm:text-base">
             Mejor puntuación
           </p>
         </div>

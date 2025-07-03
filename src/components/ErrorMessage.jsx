@@ -7,9 +7,11 @@ function ErrorMessage({
   backText = "Volver al inicio",
 }) {
   return (
-    <section className="flex h-160 items-center justify-center">
+    <section className="font-roboto flex h-160 items-center justify-center">
       <article className="bg-base-300 border-primary max-w-160 items-center rounded-2xl border-r-5 border-b-5 p-15 text-center shadow-xl">
-        <h1 className="text-error mb-2 text-3xl font-bold">{title}</h1>
+        <h1 className="text-error font-lato mb-2 text-3xl font-bold">
+          {title}
+        </h1>
         <p className="text-base-content mb-4 text-lg">{message}</p>
         <Link
           to={backUrl}
