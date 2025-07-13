@@ -98,7 +98,7 @@ npm run preview
 
 ## 🚀 Despliegue
 
-Este portfolio está desplegado en Vercel, una plataforma que permite hacer despliegues rápidos y eficientes para proyectos frontend.
+Este portfolio está desplegado en Vercel, una plataforma que permite hacer despliegues rápidos y eficientes para proyectos frontend. <br>
 🔗 Enlace en producción: https://pokedexcenter.vercel.app/
 
 ---
