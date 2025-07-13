@@ -16,11 +16,15 @@
 ---
 
 > [!NOTE]
+>
 > <h2><img src="./public/img/logo-Pokeball-256px.png" alt="Pokeball" width="32" style="vertical-align: middle;" /> Descripción del Proyecto</h2>
 >
 > ### Español
+>
 > **Pokemon Center** es una aplicación web interactiva sobre el mundo Pokemon, en la que se ofrece datos detallados sobre los Pokemons, juegos relacionados con tipos y estadísticas, y una calculadora de tipos.
+>
 > ### English
+>
 > **Pokemon Center** is an interactive web application about the Pokemon world, offering detailed data on Pokemon, type-related games and statistics, and a type calculator.
 
 ---
@@ -93,6 +97,9 @@ npm run preview
 ---
 
 ## 🚀 Despliegue
+
+Este portfolio está desplegado en Vercel, una plataforma que permite hacer despliegues rápidos y eficientes para proyectos frontend.
+🔗 Enlace en producción: https://pokedexcenter.vercel.app/
 
 ---
 
